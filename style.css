@@ -1,0 +1,124 @@
+/* Общий стиль */
+body {
+  margin: 0;
+  font-family: 'Arial Black', sans-serif;
+  color: #fff;
+
+  /* ТВОЙ ФОН */
+  background: url("images/fon.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Шапка */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 0 0 15px #ff4444, 0 0 40px #ff0000;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff3333, 0 0 20px #ff0000; }
+  to { text-shadow: 0 0 25px #ff5555, 0 0 50px #ff0000; }
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcccc;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Разделы */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff5555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Галерея */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.7);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Подвал */
+footer {
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.video-gallery {
+  margin-top: 40px;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.videos video {
+  width: 250px;       /* квадратная форма */
+  height: 250px;      /* квадратная форма */
+  object-fit: cover;   /* видео заполняет квадрат без искажений */
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.videos video:hover {
+  transform: scale(1.05);
+}
+
